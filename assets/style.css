@@ -124,7 +124,7 @@ nav {
   overflow: hidden; border-bottom: 1px solid var(--border);
   padding: 10px 0; background: var(--surface);
   position: relative; z-index: 1;
-  margin-top: 10px;
+  margin-top: 60px;
   /* var(--nav-h) */
 }
 .ticker-track { display: flex; white-space: nowrap; animation: ticker 36s linear infinite; }
@@ -292,7 +292,7 @@ footer {
 }
 .footer-left { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
 .footer-left a, .footer-right {
-  font-family: 'JetBrains Mono', monospace; font-size: 10px;
+  font-family: 'JetBrains Mono', monospace; font-size: 12px;
   letter-spacing: 0.1em; text-transform: uppercase; color: var(--dim); transition: color 0.15s;
 }
 .footer-left a:hover { color: var(--mid); }
@@ -345,14 +345,7 @@ footer {
   /* show burger, hide desktop links */
   .nav-burger { display: flex; }
   .nav-main { display: none; }
-
-  /* .page-hero {
-    height: 48vh;
-    min-height: 300px;
-    max-height: 480px;
-    padding: 0 24px 36px;
-  } */
-   /* AFTER */
+  
 .page-hero {
   height: auto;
   min-height: 0;
