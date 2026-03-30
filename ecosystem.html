@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ecosystem — NexoviaNet</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Epilogue:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.branch-card {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.bc-status {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+.bc-status.live {
+  background: var(--accent2);
+  color: var(--accent);
+  border: 1px solid rgba(232,66,15,0.25);
+}
+.bc-status.parallel {
+  background: var(--surface2);
+  color: var(--mid);
+  border: 1px solid var(--border);
+}
+.bc-status.soon {
+  background: var(--surface2);
+  color: var(--ink);
+  border: 1px solid var(--border2);
+}
+.bc-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 40px;
+  line-height: 0.95;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+.bc-tag {
+  font-size: 13px;
+  color: var(--mid);
+  font-style: italic;
+  margin-bottom: 18px;
+}
+.bc-desc {
+  font-size: 14px;
+  color: var(--mid);
+  line-height: 1.75;
+  margin-bottom: 20px;
+  flex: 1;
+}
+.bc-desc strong {
+  color: var(--ink);
+  font-weight: 500;
+}
+.bc-items {
+  display: flex;
+  flex-direction: column;
+}
+.bc-item {
+  padding: 8px 0;
+  border-top: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 10px 1fr;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--mid);
+  line-height: 1.55;
+}
+.bc-dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--dim);
+  margin-top: 7px;
+  flex-shrink: 0;
+}
+.eco-close {
+  padding: 32px 64px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  position: relative;
+  z-index: 1;
+}
+.eco-close p {
+  font-size: 14px;
+  color: var(--mid);
+  line-height: 1.75;
+  max-width: 860px;
+}
+.eco-close strong {
+  color: var(--ink);
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .branch-card { padding: 28px 24px; }
+  .eco-close { padding: 28px 24px; }
+}
+</style>
+</head>
+<body>
+<script src="assets/shared.js"></script>
+
+<div class="ticker"><div class="ticker-track">
+  <div class="ticker-item"><span>▸</span>Decision Intelligence is the current commercial focus.</div>
+  <div class="ticker-item"><span>▸</span>NexoFormula and DailyBuild are developing in parallel.</div>
+  <div class="ticker-item"><span>▸</span>NexoviaNet is broader than one product surface.</div>
+  <div class="ticker-item"><span>▸</span>More systems, tools, and releases are in motion.</div>
+  <div class="ticker-item"><span>▸</span>Decision Intelligence is the current commercial focus.</div>
+  <div class="ticker-item"><span>▸</span>NexoFormula and DailyBuild are developing in parallel.</div>
+  <div class="ticker-item"><span>▸</span>NexoviaNet is broader than one product surface.</div>
+  <div class="ticker-item"><span>▸</span>More systems, tools, and releases are in motion.</div>
+</div></div>
+
+<section class="page-hero">
+  <div class="page-hero-body">
+    <span class="eyebrow">Ecosystem</span>
+    <h1>One company.<br>Multiple <em>systems in motion.</em></h1>
+    <p class="page-hero-sub">
+      Decision Intelligence is the current commercial focus, but it is not the whole build.
+      NexoviaNet is also developing adjacent projects,
+      expanding both across product surfaces and deeper inside the systems that earn it.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="grid-3">
+    <div class="grid-cell branch-card">
+      <span class="bc-status live">Current commercial focus</span>
+      <div class="bc-name">Decision Intelligence</div>
+      <div class="bc-tag">Systems for high-stakes operating decisions.</div>
+      <p class="bc-desc">
+        The current commercial branch under NexoviaNet. Focused on helping teams structure and
+        pressure-test real operating decisions where pricing, inventory, allocation, planning,
+        supply, timing, and service tradeoffs interact.
+      </p>
+      <div class="bc-items">
+        <div class="bc-item"><div class="bc-dot"></div><div>Connects multiple operating decisions into one decision model</div></div>
+        <div class="bc-item"><div class="bc-dot"></div><div>Evaluates tradeoffs across demand, supply, timing, and service constraints</div></div>
+        <div class="bc-item"><div class="bc-dot"></div><div>Supports pilot-based work around one live business situation at a time</div></div>
+      </div>
+    </div>
+
+    <div class="grid-cell branch-card">
+      <span class="bc-status soon">Beta release soon</span>
+      <div class="bc-name">DailyBuild</div>
+      <div class="bc-tag">A workflow tool for planning, execution, reminders, and progress.</div>
+      <p class="bc-desc">
+        A workflow tool built around day-level planning and follow-through. DailyBuild is designed
+        to help users organize work, maintain momentum, and keep execution visible across tasks,
+        projects, reminders, and routines.
+      </p>
+      <div class="bc-items">
+        <div class="bc-item"><div class="bc-dot"></div><div>Supports daily planning, reminders, and project tracking in one place</div></div>
+        <div class="bc-item"><div class="bc-dot"></div><div>Built for execution clarity, not just task storage</div></div>
+        <div class="bc-item"><div class="bc-dot"></div><div>Can later evolve into an adjacent workflow layer for broader systems</div></div>
+      </div>
+    </div>
+
+    <div class="grid-cell branch-card">
+      <span class="bc-status parallel">Parallel branch</span>
+      <div class="bc-name">NexoFormula</div>
+      <div class="bc-tag">Formulation, inputs, routines, and personal self-care systems.</div>
+      <p class="bc-desc">
+        A parallel branch exploring products and systems around formulation logic, inputs, routines,
+        and personal self-care. This direction is distinct from the current B2B operating focus,
+        but remains part of the broader NexoviaNet ecosystem.
+      </p>
+      <div class="bc-items">
+        <div class="bc-item"><div class="bc-dot"></div><div>Explores formulation-driven products and recommendation logic</div></div>
+        <div class="bc-item"><div class="bc-dot"></div><div>Focuses on personal systems around inputs, routines, and self-care decisions</div></div>
+        <div class="bc-item"><div class="bc-dot"></div><div>Develops as a parallel consumer-oriented branch under the same umbrella</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-bar">
+  <h2 class="cta-bar-h">Explore the current focus,<br>or get in touch to <em>learn more</em>.</h2>
+  <div class="cta-bar-body">
+    <a href="system.html" class="btn-secondary">See the System</a>
+    <a href="https://calendly.com/nexovianet/30min" class="btn-primary" target="_blank" rel="noopener">Book a Call</a>
+  </div>
+</div>
+
+</body>
+</html>

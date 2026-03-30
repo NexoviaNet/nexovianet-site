@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The System — NexoviaNet</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Epilogue:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.layers-wrap { border-bottom: 1px solid var(--border); position: relative; z-index: 1; }
+.layers-grid { display: grid; grid-template-columns: 260px 1fr; border-top:1px solid var(--border); }
+.layer-nav { border-right: 1px solid var(--border); }
+.layer-btn { display:flex; align-items:center; gap:16px; padding:20px 24px; border-bottom:1px solid var(--border); cursor:pointer; transition:background 0.15s; }
+.layer-btn:last-child{border-bottom:none;}
+.layer-btn:hover{background:var(--surface2);}
+.layer-btn.active{background:var(--accent2);}
+.layer-btn.active .lbn,.layer-btn:hover .lbn{color:var(--accent);}
+.lbn{font-family:'Bebas Neue',sans-serif;font-size:26px;color:var(--border2);line-height:1;width:28px;flex-shrink:0;}
+.lbl{font-size:13px;font-weight:500;line-height:1.2;color:var(--ink);}
+.lbs{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--dim);margin-top:2px;}
+.layer-detail{padding:48px 56px;display:flex;flex-direction:column;justify-content:center;min-height:360px;background:var(--surface);}
+.lp{display:none;animation:lf 0.2s ease;} .lp.active{display:block;}
+@keyframes lf { from{opacity:0} to{opacity:1} }
+.lp-eye{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;}
+.lp-title{font-family:'Bebas Neue',sans-serif;font-size:38px;line-height:0.95;letter-spacing:0.02em;margin-bottom:18px;}
+.lp-desc{font-size:15px;color:var(--mid);line-height:1.8;margin-bottom:24px;max-width:540px;}
+.lp-desc strong{color:var(--ink);font-weight:500;}
+.lp-bullets{display:flex;flex-direction:column;}
+.lp-b{padding:9px 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:10px 1fr;gap:10px;font-size:13px;color:var(--mid);line-height:1.6;}
+.lp-b:last-child{border-bottom:none;}
+.lb-d{width:3px;height:3px;border-radius:50%;background:var(--accent);margin-top:8px;flex-shrink:0;}
+.diff-table{width:100%;border-collapse:collapse;border:1px solid var(--border);}
+.diff-table th{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;font-weight:500;padding:14px 18px;text-align:left;background:var(--surface);color:var(--mid);border-right:1px solid var(--border);border-bottom:1px solid var(--border);}
+.diff-table th:last-child{border-right:none;color:var(--accent);}
+.diff-table td{padding:13px 18px;font-size:13px;color:var(--mid);line-height:1.5;border-right:1px solid var(--border);border-bottom:1px solid var(--border);vertical-align:top;background:var(--bg);}
+.diff-table tr:hover td{background:var(--surface);}
+.diff-table td:last-child{border-right:none;}
+.diff-table tr:last-child td{border-bottom:none;}
+.diff-table td:first-child{font-weight:500;color:var(--ink);background:var(--surface);}
+.diff-table td.yes{color:var(--ink);font-weight:500;background:var(--accent2);}
+.diff-table td.yes::before{content:'✓  ';color:var(--accent);}
+.diff-table td.no{color:var(--dim);}
+.diff-table td.no::before{content:'–  ';}
+@media (max-width:1100px){ .layers-grid{grid-template-columns:1fr;} .layer-nav{border-right:none;border-bottom:1px solid var(--border);display:grid;grid-template-columns:repeat(3,1fr);} .layer-btn{border-bottom:none;border-right:1px solid var(--border);padding:14px 16px;} .layer-btn:nth-child(3n){border-right:none;} .lbs{display:none;} .layer-detail{min-height:auto;padding:36px 40px;} }
+@media (max-width:768px){ .layer-nav{grid-template-columns:repeat(2,1fr);} .layer-btn:nth-child(3n){border-right:1px solid var(--border);} .layer-btn:nth-child(2n){border-right:none;} .layer-detail{padding:28px 24px;} .diff-table th,.diff-table td{padding:10px 12px;font-size:12px;} }
+</style>
+</head>
+<body>
+<script src="assets/shared.js"></script>
+
+<div class="ticker"><div class="ticker-track">
+  <div class="ticker-item"><span>▸</span>Not a dashboard. A decision layer.</div>
+  <div class="ticker-item"><span>▸</span>One live decision. One connected model.</div>
+  <div class="ticker-item"><span>▸</span>Current focus: operating decisions.</div>
+  <div class="ticker-item"><span>▸</span>Built to expand across decision surfaces over time.</div>
+  <div class="ticker-item"><span>▸</span>Not a dashboard. A decision layer.</div>
+  <div class="ticker-item"><span>▸</span>One live decision. One connected model.</div>
+  <div class="ticker-item"><span>▸</span>Current focus: operating decisions.</div>
+  <div class="ticker-item"><span>▸</span>Built to expand across decision surfaces over time.</div>
+</div></div>
+
+<section class="page-hero">
+  <div class="page-hero-body">
+    <span class="eyebrow">The System</span>
+    <h1>A decision <em>layer,</em><br>not another tool.</h1>
+    <p class="page-hero-sub">NexoviaNet is built to <strong>structure what to do next</strong> when one operating situation contains multiple interacting decisions. Not more reporting. A better call.</p>
+  </div>
+</section>
+
+<div class="layers-wrap">
+  <div style="padding:20px 64px;border-bottom:1px solid var(--border);background:var(--surface);position:relative;z-index:1;">
+    <span class="eyebrow" style="margin:0;">System architecture — select a layer</span>
+  </div>
+  <div class="layers-grid">
+    <div class="layer-nav">
+      <div class="layer-btn active" onclick="showLayer(0)"><div class="lbn">01</div><div><div class="lbl">Structure</div><div class="lbs">Problem definition</div></div></div>
+      <div class="layer-btn" onclick="showLayer(1)"><div class="lbn">02</div><div><div class="lbl">Learning</div><div class="lbs">Signal extraction</div></div></div>
+      <div class="layer-btn" onclick="showLayer(2)"><div class="lbn">03</div><div><div class="lbl">Reasoning</div><div class="lbs">Tradeoff modelling</div></div></div>
+      <div class="layer-btn" onclick="showLayer(3)"><div class="lbn">04</div><div><div class="lbl">Workflow</div><div class="lbs">Decision integration</div></div></div>
+      <div class="layer-btn" onclick="showLayer(4)"><div class="lbn">05</div><div><div class="lbl">Human</div><div class="lbs">Judgment interface</div></div></div>
+      <div class="layer-btn" onclick="showLayer(5)"><div class="lbn">06</div><div><div class="lbl">Memory</div><div class="lbs">Institutional learning</div></div></div>
+    </div>
+    <div class="layer-detail">
+      <div class="lp active"><div class="lp-eye">Layer 01 — Structure</div><div class="lp-title">Problem Definition</div><p class="lp-desc">Before any model runs, the situation is decomposed into its actual decisions, dependencies, and binding constraints. <strong>The wrong problem will always produce a confident wrong answer.</strong></p><div class="lp-bullets"><div class="lp-b"><div class="lb-d"></div><div>Identify the decisions embedded inside the situation</div></div><div class="lp-b"><div class="lb-d"></div><div>Map what constrains what</div></div><div class="lp-b"><div class="lb-d"></div><div>Clarify objective, tradeoffs, and non-negotiables</div></div><div class="lp-b"><div class="lb-d"></div><div>Turn a messy situation into a modelable call</div></div></div></div>
+      <div class="lp"><div class="lp-eye">Layer 02 — Learning</div><div class="lp-title">Signal Extraction</div><p class="lp-desc">Demand, cost, supply, inventory, and timing signals are pulled into the context of the specific decision. <strong>Not just what the data says — what matters for this call.</strong></p><div class="lp-bullets"><div class="lp-b"><div class="lb-d"></div><div>Demand pattern extraction across channels and products</div></div><div class="lp-b"><div class="lb-d"></div><div>Cost and supplier signal capture relevant to the situation</div></div><div class="lp-b"><div class="lb-d"></div><div>Inventory and capacity mapping across locations and commitments</div></div><div class="lp-b"><div class="lb-d"></div><div>Uncertainty assessment — where signal is strong and where it is ambiguous</div></div></div></div>
+      <div class="lp"><div class="lp-eye">Layer 03 — Reasoning</div><div class="lp-title">Tradeoff Modelling</div><p class="lp-desc"><strong>All interacting decisions are evaluated together</strong>, not passed across separate tools. Scenarios expose upside, downside, and concentration of risk before the team commits.</p><div class="lp-bullets"><div class="lp-b"><div class="lb-d"></div><div>Simultaneous evaluation of pricing, allocation, reorder, timing, and service tradeoffs</div></div><div class="lp-b"><div class="lb-d"></div><div>Scenario testing for robustness under changing assumptions</div></div><div class="lp-b"><div class="lb-d"></div><div>Alternative comparison with explicit cost of each path</div></div><div class="lp-b"><div class="lb-d"></div><div>Risk concentration — where the recommendation is most sensitive</div></div></div></div>
+      <div class="lp"><div class="lp-eye">Layer 04 — Workflow</div><div class="lp-title">Decision Integration</div><p class="lp-desc">A recommendation only matters if a real team can use it. <strong>Output is structured for operating review, not academic elegance.</strong></p><div class="lp-bullets"><div class="lp-b"><div class="lb-d"></div><div>Recommended action with visible assumptions and rationale</div></div><div class="lp-b"><div class="lb-d"></div><div>Alternatives and what must be true for each</div></div><div class="lp-b"><div class="lb-d"></div><div>Monitoring signals that would trigger reassessment</div></div><div class="lp-b"><div class="lb-d"></div><div>Path to integrate with existing planning and operating workflows</div></div></div></div>
+      <div class="lp"><div class="lp-eye">Layer 05 — Human</div><div class="lp-title">Judgment Interface</div><p class="lp-desc">The system is designed to be challenged. <strong>Human judgment remains central</strong> — the model gives that judgment structure, not a replacement.</p><div class="lp-bullets"><div class="lp-b"><div class="lb-d"></div><div>Transparent assumptions behind every recommendation</div></div><div class="lp-b"><div class="lb-d"></div><div>Sensitivity testing when a team disagrees with an input</div></div><div class="lp-b"><div class="lb-d"></div><div>Alternative framing for finance, operators, and leadership</div></div><div class="lp-b"><div class="lb-d"></div><div>Override logic when teams intentionally diverge from the model</div></div></div></div>
+      <div class="lp"><div class="lp-eye">Layer 06 — Memory</div><div class="lp-title">Institutional Learning</div><p class="lp-desc">Decisions, outcomes, and broken assumptions accumulate into reusable system memory. <strong>The organisation gets better at the class of decision itself.</strong></p><div class="lp-bullets"><div class="lp-b"><div class="lb-d"></div><div>Decision logs — what was decided, why, and under which assumptions</div></div><div class="lp-b"><div class="lb-d"></div><div>Calibration of assumptions against observed results</div></div><div class="lp-b"><div class="lb-d"></div><div>Pattern recognition across similar operating situations</div></div><div class="lp-b"><div class="lb-d"></div><div>Progressive refinement of models and recommendations</div></div></div></div>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <span class="eyebrow">Differentiation</span>
+      <h2 class="section-h">Why existing tools<br><em>stop short.</em></h2>
+    </div>
+    <p class="section-desc">Most organisations already own reporting and planning tools. The gap is not data access. The gap is <strong>decision architecture</strong> — the structure needed to evaluate connected choices together and return a usable recommendation.</p>
+  </div>
+  <table class="diff-table">
+    <thead><tr><th>Capability</th><th>BI / Dashboards</th><th>ERP / Planning</th><th>Spreadsheets</th><th>NexoviaNet</th></tr></thead>
+    <tbody>
+      <tr><td>Shows what happened</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+      <tr><td>Maps interacting decisions</td><td class="no">No</td><td class="no">No</td><td class="no">Partially</td><td class="yes">Core function</td></tr>
+      <tr><td>Evaluates tradeoffs simultaneously</td><td class="no">No</td><td class="no">No</td><td class="no">One at a time</td><td class="yes">Yes — in one model</td></tr>
+      <tr><td>Produces a structured recommendation</td><td class="no">No</td><td class="no">No</td><td class="no">No</td><td class="yes">Yes — logic visible</td></tr>
+      <tr><td>Shows alternatives and risk exposure</td><td class="no">No</td><td class="no">No</td><td class="no">Sometimes</td><td class="yes">Yes — by design</td></tr>
+      <tr><td>Improves with completed cycles</td><td class="no">No</td><td class="no">No</td><td class="no">No</td><td class="yes">Yes — memory layer</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<div class="cta-bar">
+  <h2 class="cta-bar-h">Start with one situation.<br>See the system <em>on a real call.</em></h2>
+  <div class="cta-bar-body">
+    <a href="collaborate.html" class="btn-primary">Start a Pilot</a>
+    <a href="decisions.html" class="btn-secondary">See Use Cases</a>
+  </div>
+</div>
+
+<script>
+function showLayer(i){
+  document.querySelectorAll('.layer-btn').forEach((b,j)=>b.classList.toggle('active',j===i));
+  document.querySelectorAll('.lp').forEach((p,j)=>p.classList.toggle('active',j===i));
+}
+</script>
+</body>
+</html>

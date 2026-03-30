@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Collaborate — NexoviaNet</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Epilogue:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.founder-photo {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: var(--surface2);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.founder-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+.f-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 34px;
+  letter-spacing: 0.06em;
+  margin-bottom: 2px;
+}
+.f-role {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin-bottom: 20px;
+}
+.f-bio {
+  font-size: 15px;
+  color: var(--mid);
+  line-height: 1.8;
+  margin-bottom: 24px;
+  border-left: 2px solid var(--accent);
+  padding-left: 18px;
+}
+.f-bio strong { color: var(--ink); font-weight: 500; }
+
+.f-links { display: flex; gap: 10px; flex-wrap: wrap; }
+.f-link {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 7px 14px;
+  border: 1px solid var(--border2);
+  color: var(--mid);
+  transition: color 0.15s, border-color 0.15s;
+}
+.f-link:hover { color: var(--ink); border-color: var(--ink); }
+
+.contact-mini {
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid var(--border);
+}
+.contact-mini-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+.contact-chip {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 8px 14px;
+  border: 1px solid var(--border2);
+  color: var(--mid);
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+.contact-chip:hover {
+  color: var(--ink);
+  border-color: var(--ink);
+  background: var(--surface2);
+}
+
+.hero-cta-block {
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid var(--border);
+}
+.hero-cta-note {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--dim);
+  letter-spacing: 0.08em;
+  margin-top: 14px;
+}
+
+.closing-cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+}
+
+@media (max-width: 768px) {
+  .contact-mini-row { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+<script src="assets/shared.js"></script>
+
+<div class="ticker"><div class="ticker-track">
+  <div class="ticker-item"><span>▸</span>One live decision. One connected model.</div>
+  <div class="ticker-item"><span>▸</span>Start narrow. Prove value. Expand from there.</div>
+  <div class="ticker-item"><span>▸</span>Not a dashboard. A decision layer.</div>
+  <div class="ticker-item"><span>▸</span>Bring a real operating situation.</div>
+  <div class="ticker-item"><span>▸</span>One live decision. One connected model.</div>
+  <div class="ticker-item"><span>▸</span>Start narrow. Prove value. Expand from there.</div>
+  <div class="ticker-item"><span>▸</span>Not a dashboard. A decision layer.</div>
+  <div class="ticker-item"><span>▸</span>Bring a real operating situation.</div>
+</div></div>
+
+<section class="page-hero">
+  <div class="page-hero-body">
+    <span class="eyebrow">Collaborate</span>
+    <h1>Bring the call<br>you are <em>already making.</em></h1>
+    <p class="page-hero-sub">Every engagement starts with one real operating situation your team is navigating. <strong>No broad software rollout. No multi-month scoping.</strong></p>
+
+    <div class="btn-row" style="margin-top:28px;">
+      <a href="https://calendly.com/nexovianet/30min" class="btn-primary" target="_blank" rel="noopener">Book a Call</a>
+      <a href="mailto:hello@nexovianet.com" class="btn-secondary">Email Instead</a>
+    </div>
+  </div>
+</section>
+
+<section class="section surface">
+  <div class="section-head">
+    <div>
+      <span class="eyebrow">Pilot model</span>
+      <h2 class="section-h">Start narrow. Prove value.<br><em>Expand from there.</em></h2>
+    </div>
+    <p class="section-desc">
+      The pilot is designed to stand on its own.
+      <strong>One situation, one connected model, one recommendation package.</strong>
+      If it proves value, that work becomes the foundation for recurring decision support and broader system logic.
+    </p>
+  </div>
+
+  <div class="grid-4">
+    <div class="grid-cell">
+      <div class="cell-num">01</div>
+      <div class="cell-title">Bring one real situation</div>
+      <div class="cell-desc">A pricing, allocation, supply, promotion, or planning situation your team is already facing.</div>
+    </div>
+    <div class="grid-cell">
+      <div class="cell-num">02</div>
+      <div class="cell-title">Map the embedded decisions</div>
+      <div class="cell-desc">Identify the interacting decisions, constraints, objectives, and dependencies inside the situation.</div>
+    </div>
+    <div class="grid-cell">
+      <div class="cell-num">03</div>
+      <div class="cell-title">Model the tradeoffs</div>
+      <div class="cell-desc">Evaluate the connected decisions together across scenarios and expose alternatives and risk concentration.</div>
+    </div>
+    <div class="grid-cell">
+      <div class="cell-num">04</div>
+      <div class="cell-title">Review the recommendation</div>
+      <div class="cell-desc">A decision output your team can challenge: recommended path, assumptions, alternatives, and what to monitor next.</div>
+    </div>
+  </div>
+</section>
+
+<div class="split">
+  <div class="split-left">
+    <div class="founder-photo">
+      <img src="assets/headshot2.jpg" alt="Lluvia Jing" onerror="this.style.display='none'">
+    </div>
+    <div class="f-name">Lluvia Weijia Jing</div>
+    <div class="f-role">PhD · Founder & CEO · NexoviaNet</div>
+    <p class="f-bio">
+      I build decision systems at the intersection of <strong>operations research, machine learning, and AI</strong>.
+      My background is in complex planning under uncertainty — exactly the kind of environment where disconnected decisions quietly become expensive.
+    </p>
+    <div class="f-links">
+      <a href="https://www.linkedin.com/in/noturlluvia/" class="f-link" target="_blank" rel="noopener">LinkedIn →</a>
+      <a href="https://github.com/noturlluvia" class="f-link" target="_blank" rel="noopener">GitHub →</a>
+    </div>
+  </div>
+
+  <div class="split-right surface">
+    <div class="stat-row">
+      <div class="stat-cell"><div class="stat-n">8</div><div class="stat-l">Years Research</div></div>
+      <div class="stat-cell"><div class="stat-n">3</div><div class="stat-l">Applied Contexts</div></div>
+      <div class="stat-cell"><div class="stat-n">PhD</div><div class="stat-l">Operations Research</div></div>
+    </div>
+
+    <div class="item-list">
+      <div class="item" style="grid-template-columns:10px 1fr;gap:10px;">
+        <div style="width:3px;height:3px;border-radius:50%;background:var(--accent);margin-top:8px;flex-shrink:0;"></div>
+        <div><strong>Decision modelling</strong> across constrained systems with competing objectives.</div>
+      </div>
+      <div class="item" style="grid-template-columns:10px 1fr;gap:10px;">
+        <div style="width:3px;height:3px;border-radius:50%;background:var(--accent);margin-top:8px;flex-shrink:0;"></div>
+        <div><strong>Signal extraction</strong> from uncertain operating environments.</div>
+      </div>
+      <div class="item" style="grid-template-columns:10px 1fr;gap:10px;">
+        <div style="width:3px;height:3px;border-radius:50%;background:var(--accent);margin-top:8px;flex-shrink:0;"></div>
+        <div><strong>System design</strong> for outputs real teams can challenge and use.</div>
+      </div>
+      <div class="item" style="grid-template-columns:10px 1fr;gap:10px;">
+        <div style="width:3px;height:3px;border-radius:50%;background:var(--accent);margin-top:8px;flex-shrink:0;"></div>
+        <div><strong>Practical orientation</strong> toward one live decision, not endless analysis.</div>
+      </div>
+    </div>
+
+    <div class="contact-mini">
+      <span class="eyebrow">Get in touch</span>
+      <div class="contact-mini-row">
+        <a href="https://calendly.com/nexovianet/30min" class="contact-chip" target="_blank" rel="noopener">Book a Call</a>
+        <a href="mailto:hello@nexovianet.com" class="contact-chip">hello@nexovianet.com</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
