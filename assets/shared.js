@@ -54,11 +54,11 @@
   document.body.insertAdjacentHTML('beforeend', `
     <footer>
       <div class="footer-left">
-        <a href="https://www.linkedin.com/in/noturlluvia/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://github.com/noturlluvia" target="_blank" rel="noopener">GitHub</a>
-        <a href="mailto:hello@nexovianet.com">Email</a>
+        <a href="https://www.linkedin.com/company/nexovianet" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:hello@nexovianet.com">Contact</a>
       </div>
-      <div class="footer-right">© 2026 NexoviaNet LLC · Oakland · Boston</div>
+      <div class="footer-right">© 2026 NexoviaNet LLC. All rights reserved.</div>
     </footer>
   `);
 })();

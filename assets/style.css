@@ -292,7 +292,7 @@ footer {
 }
 .footer-left { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
 .footer-left a, .footer-right {
-  font-family: 'JetBrains Mono', monospace; font-size: 12px;
+  font-family: 'JetBrains Mono', monospace; font-size: 11px;
   letter-spacing: 0.1em; text-transform: uppercase; color: var(--dim); transition: color 0.15s;
 }
 .footer-left a:hover { color: var(--mid); }
