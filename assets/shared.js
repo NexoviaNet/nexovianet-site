@@ -4,8 +4,8 @@
     { href: 'index.html',       label: 'Home' },
     { href: 'decisions.html',   label: 'Decisions' },
     { href: 'system.html',      label: 'System' },
-    { href: 'ecosystem.html',   label: 'Ecosystem' },
     { href: 'collaborate.html', label: 'Collaborate' },
+    { href: 'ecosystem.html',   label: 'Ecosystem' },
   ];
 
   const navLinks = links.map(l =>

@@ -60,7 +60,10 @@
   <div class="page-hero-body">
     <span class="eyebrow">The System</span>
     <h1>A decision <em>layer,</em><br>not another tool.</h1>
-    <p class="page-hero-sub">NexoviaNet is built to <strong>structure what to do next</strong> when one operating situation contains multiple interacting decisions. Not more reporting. A better call.</p>
+    <p class="page-hero-sub">
+      NexoviaNet delivers a decision intelligence system for operating situations where multiple decisions interact. 
+      The system structures the full cycle — from problem definition and decision inputs through evaluation, workflow, judgment, and learning over time.
+    </p>
   </div>
 </section>
 
@@ -71,19 +74,91 @@
   <div class="layers-grid">
     <div class="layer-nav">
       <div class="layer-btn active" onclick="showLayer(0)"><div class="lbn">01</div><div><div class="lbl">Structure</div><div class="lbs">Problem definition</div></div></div>
-      <div class="layer-btn" onclick="showLayer(1)"><div class="lbn">02</div><div><div class="lbl">Learning</div><div class="lbs">Signal extraction</div></div></div>
-      <div class="layer-btn" onclick="showLayer(2)"><div class="lbn">03</div><div><div class="lbl">Reasoning</div><div class="lbs">Tradeoff modelling</div></div></div>
+      <div class="layer-btn" onclick="showLayer(1)"><div class="lbn">02</div><div><div class="lbl">Signal</div><div class="lbs">Decision inputs</div></div></div>
+      <div class="layer-btn" onclick="showLayer(2)"><div class="lbn">03</div><div><div class="lbl">Evaluation</div><div class="lbs">Tradeoff modelling</div></div></div>
       <div class="layer-btn" onclick="showLayer(3)"><div class="lbn">04</div><div><div class="lbl">Workflow</div><div class="lbs">Decision integration</div></div></div>
       <div class="layer-btn" onclick="showLayer(4)"><div class="lbn">05</div><div><div class="lbl">Human</div><div class="lbs">Judgment interface</div></div></div>
       <div class="layer-btn" onclick="showLayer(5)"><div class="lbn">06</div><div><div class="lbl">Memory</div><div class="lbs">Institutional learning</div></div></div>
     </div>
     <div class="layer-detail">
-      <div class="lp active"><div class="lp-eye">Layer 01 — Structure</div><div class="lp-title">Problem Definition</div><p class="lp-desc">Before any model runs, the situation is decomposed into its actual decisions, dependencies, and binding constraints. <strong>The wrong problem will always produce a confident wrong answer.</strong></p><div class="lp-bullets"><div class="lp-b"><div class="lb-d"></div><div>Identify the decisions embedded inside the situation</div></div><div class="lp-b"><div class="lb-d"></div><div>Map what constrains what</div></div><div class="lp-b"><div class="lb-d"></div><div>Clarify objective, tradeoffs, and non-negotiables</div></div><div class="lp-b"><div class="lb-d"></div><div>Turn a messy situation into a modelable call</div></div></div></div>
-      <div class="lp"><div class="lp-eye">Layer 02 — Learning</div><div class="lp-title">Signal Extraction</div><p class="lp-desc">Demand, cost, supply, inventory, and timing signals are pulled into the context of the specific decision. <strong>Not just what the data says — what matters for this call.</strong></p><div class="lp-bullets"><div class="lp-b"><div class="lb-d"></div><div>Demand pattern extraction across channels and products</div></div><div class="lp-b"><div class="lb-d"></div><div>Cost and supplier signal capture relevant to the situation</div></div><div class="lp-b"><div class="lb-d"></div><div>Inventory and capacity mapping across locations and commitments</div></div><div class="lp-b"><div class="lb-d"></div><div>Uncertainty assessment — where signal is strong and where it is ambiguous</div></div></div></div>
-      <div class="lp"><div class="lp-eye">Layer 03 — Reasoning</div><div class="lp-title">Tradeoff Modelling</div><p class="lp-desc"><strong>All interacting decisions are evaluated together</strong>, not passed across separate tools. Scenarios expose upside, downside, and concentration of risk before the team commits.</p><div class="lp-bullets"><div class="lp-b"><div class="lb-d"></div><div>Simultaneous evaluation of pricing, allocation, reorder, timing, and service tradeoffs</div></div><div class="lp-b"><div class="lb-d"></div><div>Scenario testing for robustness under changing assumptions</div></div><div class="lp-b"><div class="lb-d"></div><div>Alternative comparison with explicit cost of each path</div></div><div class="lp-b"><div class="lb-d"></div><div>Risk concentration — where the recommendation is most sensitive</div></div></div></div>
-      <div class="lp"><div class="lp-eye">Layer 04 — Workflow</div><div class="lp-title">Decision Integration</div><p class="lp-desc">A recommendation only matters if a real team can use it. <strong>Output is structured for operating review, not academic elegance.</strong></p><div class="lp-bullets"><div class="lp-b"><div class="lb-d"></div><div>Recommended action with visible assumptions and rationale</div></div><div class="lp-b"><div class="lb-d"></div><div>Alternatives and what must be true for each</div></div><div class="lp-b"><div class="lb-d"></div><div>Monitoring signals that would trigger reassessment</div></div><div class="lp-b"><div class="lb-d"></div><div>Path to integrate with existing planning and operating workflows</div></div></div></div>
-      <div class="lp"><div class="lp-eye">Layer 05 — Human</div><div class="lp-title">Judgment Interface</div><p class="lp-desc">The system is designed to be challenged. <strong>Human judgment remains central</strong> — the model gives that judgment structure, not a replacement.</p><div class="lp-bullets"><div class="lp-b"><div class="lb-d"></div><div>Transparent assumptions behind every recommendation</div></div><div class="lp-b"><div class="lb-d"></div><div>Sensitivity testing when a team disagrees with an input</div></div><div class="lp-b"><div class="lb-d"></div><div>Alternative framing for finance, operators, and leadership</div></div><div class="lp-b"><div class="lb-d"></div><div>Override logic when teams intentionally diverge from the model</div></div></div></div>
-      <div class="lp"><div class="lp-eye">Layer 06 — Memory</div><div class="lp-title">Institutional Learning</div><p class="lp-desc">Decisions, outcomes, and broken assumptions accumulate into reusable system memory. <strong>The organisation gets better at the class of decision itself.</strong></p><div class="lp-bullets"><div class="lp-b"><div class="lb-d"></div><div>Decision logs — what was decided, why, and under which assumptions</div></div><div class="lp-b"><div class="lb-d"></div><div>Calibration of assumptions against observed results</div></div><div class="lp-b"><div class="lb-d"></div><div>Pattern recognition across similar operating situations</div></div><div class="lp-b"><div class="lb-d"></div><div>Progressive refinement of models and recommendations</div></div></div></div>
+      <div class="lp active">
+        <div class="lp-eye">Layer 01 — Structure</div>
+        <div class="lp-title">Problem Definition</div>
+        <p class="lp-desc">Before any model runs, the situation is decomposed into its actual decisions, dependencies, and binding constraints. 
+          The wrong problem will always produce a confident wrong answer.</p>
+        <div class="lp-bullets">
+          <div class="lp-b"><div class="lb-d"></div><div>Identify the decisions embedded inside the situation</div></div>
+          <div class="lp-b"><div class="lb-d"></div><div>Map what constrains what</div></div>
+          <div class="lp-b"><div class="lb-d"></div><div>Clarify objective, tradeoffs, and non-negotiables</div></div>
+          <div class="lp-b"><div class="lb-d"></div><div>Turn a messy situation into a modelable call</div></div>
+        </div>
+      </div>
+
+      <div class="lp">
+        <div class="lp-eye">Layer 02 — Signal</div>
+        <div class="lp-title">Decision Inputs</div>
+        <p class="lp-desc">Signals are pulled into the context of the specific decision - not just what the data says,
+           but what matters for this call.</p>
+        </p>
+        <div class="lp-bullets">
+          <div class="lp-b"><div class="lb-d"></div><div>Demand patterns relevant to the situation</div></div>
+          <div class="lp-b"><div class="lb-d"></div><div>Cost, supplier, and timing signals that affect the call</div></div>
+          <div class="lp-b"><div class="lb-d"></div><div>Inventory and capacity conditions across the operating context</div></div>
+          <div class="lp-b"><div class="lb-d"></div><div>Uncertainty assessment — where signal is strong and where it remains ambiguous</div></div>
+        </div>
+      </div>
+
+      <div class="lp">
+        <div class="lp-eye">Layer 03 — Evaluation</div>
+        <div class="lp-title">Tradeoff Modelling</div>
+        <p class="lp-desc">Interacting decisions are evaluated together, not passed across separate tools. 
+          The system exposes alternatives, trade-offs, and risk before the team commits.</p>
+        <div class="lp-bullets">
+          <div class="lp-b"><div class="lb-d"></div><div>Evaluate pricing, allocation, reorder, timing, and service trade-offs together</div></div>
+          <div class="lp-b"><div class="lb-d"></div><div>Stress-test alternatives under changing assumptions</div></div>
+          <div class="lp-b"><div class="lb-d"></div><div>Compare paths with explicit cost and outcome</div></div>
+          <div class="lp-b"><div class="lb-d"></div><div>Show where the recommendation is most sensitive</div></div>
+        </div>
+      </div>
+
+      <div class="lp">
+        <div class="lp-eye">Layer 04 — Workflow</div>
+        <div class="lp-title">Decision Integration</div>
+        <p class="lp-desc">A recommendation only matters if a real team can use it. 
+          Output is structured for operating review, not analysis in isolation.</p>
+        <div class="lp-bullets">
+          <div class="lp-b"><div class="lb-d"></div><div>Recommended action with visible assumptions and rationale</div></div>
+          <div class="lp-b"><div class="lb-d"></div><div>Alternatives and what must be true for each</div></div>
+          <div class="lp-b"><div class="lb-d"></div><div>Monitoring signals that would trigger reassessment</div></div>
+          <div class="lp-b"><div class="lb-d"></div><div>Path to integrate with existing planning and operating workflows</div></div>
+        </div>
+      </div>
+
+      <div class="lp">
+        <div class="lp-eye">Layer 05 — Human</div>
+        <div class="lp-title">Judgment Interface</div>
+        <p class="lp-desc">The system is designed to be challenged. Human judgment remains central 
+          — the model gives structure, not a replacement for judgment.</p>
+        <div class="lp-bullets">
+          <div class="lp-b"><div class="lb-d"></div><div>Transparent assumptions behind every recommendation</div></div>
+          <div class="lp-b"><div class="lb-d"></div><div>Sensitivity testing when a team disagrees with an input</div></div>
+          <div class="lp-b"><div class="lb-d"></div><div>Alternative framing for finance, operators, and leadership</div></div>
+          <div class="lp-b"><div class="lb-d"></div><div>Override logic when teams intentionally diverge from the model</div></div>
+        </div>
+      </div>
+
+      <div class="lp">
+        <div class="lp-eye">Layer 06 — Memory</div>
+        <div class="lp-title">Institutional Learning</div>
+        <p class="lp-desc">Decisions, outcomes, and assumptions accumulate into system memory. 
+          The organisation improves how it handles this type of decision over time.</p>
+        <div class="lp-bullets">
+          <div class="lp-b"><div class="lb-d"></div><div>Decision logs — what was decided, why, and under which assumptions</div></div>
+          <div class="lp-b"><div class="lb-d"></div><div>Calibration of assumptions against observed results</div></div>
+          <div class="lp-b"><div class="lb-d"></div><div>Pattern recognition across similar operating situations</div></div>
+          <div class="lp-b"><div class="lb-d"></div><div>Progressive refinement of models and recommendations</div></div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -113,7 +188,7 @@
   <h2 class="cta-bar-h">Start with one situation.<br>See the system <em>on a real call.</em></h2>
   <div class="cta-bar-body">
     <a href="collaborate.html" class="btn-primary">Start a Pilot</a>
-    <a href="decisions.html" class="btn-secondary">See Use Cases</a>
+    <a href="decisions.html" class="btn-secondary">See Operating Decisions</a>
   </div>
 </div>
 
